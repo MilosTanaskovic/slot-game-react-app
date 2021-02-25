@@ -1,1 +1,1 @@
-# slot-game-react-app
+# slot-game-react-app - Game Developer Assignment

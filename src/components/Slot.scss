@@ -1,0 +1,15 @@
+.icons {
+	display: inline-block;
+	width: 128px;
+	height: 188px;
+	overflow: hidden;
+	background: rgb(0, 0, 0) url(../assets/images/sprite.png) repeat-y;
+	will-change: backgroundPosition;
+	transition: 0.3s background-position ease-in-out;
+	padding: 0 80px;
+	transform: translateZ(0);
+
+	&:nth-child(2) {
+		margin: 0 10px;
+	}
+}

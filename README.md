@@ -1,3 +1,19 @@
+# How to run slot game locally
+
+After clone this repo, in the project folder run ->
+
+## npm install
+
+for install all packages
+
+And then run ->
+
+## npm start
+
+to start project
+
+If you didn't install npm previously, you need to install npm
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

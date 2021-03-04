@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import components
 import Slot from './components/Slot';
 import RepeatButton from './components/RepeatButton';
+import WinningSound from './components/WinningSound';
 // import style
 import './App.scss';
 
@@ -48,6 +49,7 @@ class App extends Component {
         balance: prevBalance + earning,
       })
       this.resetMatchingItems();
+      const { winner } = this.state;
       const first = App.matches[0];
       let results = App.matches.every(match => match === first);
       this.setState({ winner: results });
@@ -107,10 +109,17 @@ class App extends Component {
   }
 
   render() {
+    const { winner } = this.state;
 
     let repeatButton = null;
+    let winningSound = null;
 
     repeatButton = <RepeatButton onClick={this.handleClick} />
+
+    if(winner) {
+      winningSound = <WinningSound />
+      console.log("Perfect !!!");
+    }
 
     return (
       <div>
@@ -132,6 +141,10 @@ class App extends Component {
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child7 = child; }} timer="1000" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child8 = child; }} timer="1500" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child9 = child; }} timer="2000" />
+          </div>
+          {/** Win Score */}
+          <div className="win-container">
+            {this.state.win > 2 && <span className="win-score">${this.state.win.toFixed(2)}</span>}
           </div>
         </div>
         

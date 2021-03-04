@@ -116,19 +116,19 @@ class App extends Component {
       <div>
         <div className="slot">
           {/** First Line */}
-          <div className="slot-container">
+          <div className="slot-container first-line">
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child1 = child; }} timer="1000" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child2 = child; }} timer="1500" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child3 = child; }} timer="2000" />
           </div>
           {/** Second Line */}
-          <div className="slot-container">
+          <div className="slot-container second-line">
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child4 = child; }} timer="1000" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child5 = child; }} timer="1500" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child6 = child; }} timer="2000" />
           </div>
           {/** Third Line */}
-          <div className="slot-container">
+          <div className="slot-container third-line">
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child7 = child; }} timer="1000" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child8 = child; }} timer="1500" />
             <Slot onFinish={this.finishHandler} ref={(child) => { this._child9 = child; }} timer="2000" />
@@ -137,15 +137,15 @@ class App extends Component {
         
         {/** Score Container */}
         <div className="score-container">
-          <div> 
+          <div className="score-content"> 
             <span>$2.00</span>               
             <span>Win</span>
           </div>
-          <div>      
+          <div className="score-content">      
             <span>{this.state.win === 0 ? '---' : '$' + this.state.win.toFixed(2)}</span>          
             <span>Bet</span>
           </div>
-          <div>
+          <div className="score-content">
             <span>${this.state.balance.toFixed(2)}</span>
             <span>Balance</span>       
           </div>

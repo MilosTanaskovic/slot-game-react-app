@@ -1,0 +1,27 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+#repeatButton {
+  appearance: none;  
+  border: none;
+  background: url(../assets/images/spinner.png) transparent 0 0 no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50vw + 220px); 
+  cursor: pointer;
+  animation: 6s linear infinite spin;
+}
+/* Mobile Devices */
+@media screen and (max-width: 500px) {
+  #repeatButton {
+    width: 40px;
+    height: 40px;
+    top: calc(50% - -130px);
+    left: calc(50vw + -20px); 
+  }
+}
